@@ -1,0 +1,34 @@
+10
+
+dir
+34
+https://zocker/svn/wsv/trunk/de.broscode.wsv.services/src/de/broscode/wsv
+https://zocker/svn/wsv
+
+
+
+2012-08-22T14:43:28.712614Z
+34
+balurat
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+e411858e-46bb-bc4c-a604-d8c58c7a3c05
+
+entities
+dir
+
+services
+dir
+

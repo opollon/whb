@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/wsv/!svn/ver/34/trunk/de.broscode.wsv.services/src/de/broscode/wsv/services
+END
+IResidentChangeListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/wsv/!svn/ver/21/trunk/de.broscode.wsv.services/src/de/broscode/wsv/services/IResidentChangeListener.java
+END
+IResidentService.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/wsv/!svn/ver/21/trunk/de.broscode.wsv.services/src/de/broscode/wsv/services/IResidentService.java
+END
+ResidentListServices.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/wsv/!svn/ver/21/trunk/de.broscode.wsv.services/src/de/broscode/wsv/services/ResidentListServices.java
+END

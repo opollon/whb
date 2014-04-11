@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Bewohner Daten-Plugin
+Bundle-SymbolicName: de.broscode.wsv.services
+Bundle-Version: 1.0.0
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: de.broscode.wsv.entities,
+ de.broscode.wsv.services
+Bundle-ActivationPolicy: lazy
