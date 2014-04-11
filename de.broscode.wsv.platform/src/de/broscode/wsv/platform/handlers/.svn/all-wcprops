@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/wsv/!svn/ver/33/trunk/de.broscode.wsv.platform/src/de/broscode/wsv/platform/handlers
+END
+ResidentEditHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/wsv/!svn/ver/33/trunk/de.broscode.wsv.platform/src/de/broscode/wsv/platform/handlers/ResidentEditHandler.java
+END
+DeleteHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/wsv/!svn/ver/19/trunk/de.broscode.wsv.platform/src/de/broscode/wsv/platform/handlers/DeleteHandler.java
+END
+RefreshHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/wsv/!svn/ver/19/trunk/de.broscode.wsv.platform/src/de/broscode/wsv/platform/handlers/RefreshHandler.java
+END
