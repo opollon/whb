@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+    <!-- ========================= Start of BEAN POSTPROCESSORS ======================== -->
+
+    <bean id="propertyPlaceholderConfigurer"
+        class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="properties">
+            <props>
+                <prop key="core.remoteServer">localhost</prop>
+                <prop key="core.remotePort">8081</prop>
+                <prop key="core.remoteSecurePort">8443</prop>
+                <prop key="core.remoteContext">wsv</prop>
+            </props>
+        </property>
+        <property name="systemPropertiesModeName">
+            <value>SYSTEM_PROPERTIES_MODE_OVERRIDE</value>
+        </property>
+    </bean>
+
+    <!-- ========================= End of BEAN POSTPROCESSORS ========================== -->
+
+    <!-- ========================= Start of SERVICE DEFINITIONS ========================= -->
+
+<!--     RemoteAuthenticationManager Remote Service Local Proxy with inner RemoteAuthenticationManager Remote Service invoker -->
+<!--     <bean id="remoteAuthenticationManager" class="org.springframework.aop.framework.ProxyFactoryBean"> -->
+<!--         <property name="target"> -->
+<!--             <bean class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean"> -->
+                
+<!--                 <property name="serviceUrl"><value>https://${core.remoteServer}:${core.remotePort}/${core.remoteContext}/RemoteAuthenticationManager</value></property> -->
+<!--                 <property name="serviceInterface"><value>org.acegisecurity.providers.rcp.RemoteAuthenticationManager</value></property> -->
+<!--             </bean> -->
+<!--         </property> -->
+<!--         <property name="proxyInterfaces"><value>org.acegisecurity.providers.rcp.RemoteAuthenticationManager</value></property> -->
+        
+<!--     </bean> -->
+
+    <!-- UserService Remote Service Local Proxy with inner SystemService Remote Service invoker -->
+    <bean id="userService" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+    	<property name="serviceUrl" value="http://${core.remoteServer}:${core.remotePort}/${core.remoteContext}/userService" />
+        <property name="serviceInterface" value="de.broscode.wsv.services.IUserService" />
+        <property name="httpInvokerRequestExecutor">
+		    <bean class="de.broscode.wsv.connection.BasicAuthenticationCommonsHttpInvokerRequestExecutor"  />
+		</property>
+    </bean>
+    
+    <bean id="kundenService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+                
+                <property name="serviceUrl"><value>http://${core.remoteServer}:${core.remotePort}/${core.remoteContext}/kundenService</value></property>
+                <property name="serviceInterface"><value>de.broscode.wsv.services.IKundenService</value></property>
+            </bean>
+        </property>
+        <property name="proxyInterfaces"><value>de.broscode.wsv.services.IKundenService</value></property>
+        
+    </bean>
+
+    <bean id="arztService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+                
+                <property name="serviceUrl"><value>http://${core.remoteServer}:${core.remotePort}/${core.remoteContext}/arztService</value></property>
+                <property name="serviceInterface"><value>de.broscode.wsv.services.IArztService</value></property>
+            </bean>
+        </property>
+        <property name="proxyInterfaces"><value>de.broscode.wsv.services.IArztService</value></property>
+        
+    </bean>
+    
+    <bean id="migrationService" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+        <property name="serviceUrl" value="https://${core.remoteServer}:${core.remoteSecurePort}/${core.remoteContext}/migrationService" />
+        <property name="serviceInterface" value="de.broscode.wsv.services.IMigrationService" />
+        <property name="httpInvokerRequestExecutor">
+		    <bean class="de.broscode.wsv.connection.BasicAuthenticationCommonsHttpInvokerRequestExecutor"  />
+		</property>
+    </bean>
+
+    <!-- ========================= End of SERVICE DEFINITIONS ========================= -->
+
+</beans>
