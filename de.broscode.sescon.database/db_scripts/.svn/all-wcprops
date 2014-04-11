@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/wsv/!svn/ver/25/trunk/de.broscode.wsv.database/db_scripts
+END
+create_user_table.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/wsv/!svn/ver/30/trunk/de.broscode.wsv.database/db_scripts/create_user_table.sql
+END
