@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/wsv/!svn/ver/12/trunk/de.broscode.wsv.server/src/main/java/de/broscode/wsv/services
+END
+UserServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/wsv/!svn/ver/35/trunk/de.broscode.wsv.server/src/main/java/de/broscode/wsv/services/UserServiceImpl.java
+END
+WHBServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/wsv/!svn/ver/22/trunk/de.broscode.wsv.server/src/main/java/de/broscode/wsv/services/WHBServiceImpl.java
+END

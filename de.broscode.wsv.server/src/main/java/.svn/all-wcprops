@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/wsv/!svn/ver/12/trunk/de.broscode.wsv.server/src/main/java
+END
+applicationContext-core-export-remoteServices.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/wsv/!svn/ver/12/trunk/de.broscode.wsv.server/src/main/java/applicationContext-core-export-remoteServices.xml
+END
+applicationContext-core-services.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/wsv/!svn/ver/31/trunk/de.broscode.wsv.server/src/main/java/applicationContext-core-services.xml
+END
+applicationContext-datasource.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/wsv/!svn/ver/35/trunk/de.broscode.wsv.server/src/main/java/applicationContext-datasource.xml
+END
+beanRefFactory-core.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/wsv/!svn/ver/12/trunk/de.broscode.wsv.server/src/main/java/beanRefFactory-core.xml
+END

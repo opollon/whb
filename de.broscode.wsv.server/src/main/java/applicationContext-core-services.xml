@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<!-- UserService Service Proxy with inner UserService Service Implementation -->
+	<bean id="userService" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target">
+			<bean class="de.broscode.wsv.services.UserServiceImpl">
+
+				<property name="userDao" ref="myUserDAO" />
+			</bean>
+		</property>
+		<property name="proxyInterfaces">
+			<value>de.broscode.wsv.services.IUserService</value>
+		</property>
+	</bean>
+
+	<bean id="userDetailsService" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target">
+			<bean class="de.broscode.wsv.services.UserDetailsServiceImpl">
+
+				<property name="userDao" ref="myUserDAO" />
+			</bean>
+		</property>
+		<property name="proxyInterfaces">
+			<value>org.springframework.security.core.userdetails.UserDetailsService</value>
+		</property>
+	</bean>
+	
+	<bean id="kundenService" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target">
+			<bean class="de.broscode.wsv.services.KundenServiceImpl">
+
+				<property name="kundeDao" ref="myKundeDAO" />
+			</bean>
+		</property>
+		<property name="proxyInterfaces">
+			<value>de.broscode.wsv.services.IKundenService</value>
+		</property>
+	</bean>
+	
+	<bean id="migrationService" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target">
+			<bean class="de.broscode.wsv.services.MigrationServiceImpl">
+
+				
+			</bean>
+		</property>
+		<property name="proxyInterfaces">
+			<value>de.broscode.wsv.services.IMigrationService</value>
+		</property>
+	</bean>
+
+	<bean id="arztService" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target">
+			<bean class="de.broscode.wsv.services.ArztServiceImpl">
+
+				<property name="arztDao" ref="myArztDAO" />
+			</bean>
+		</property>
+		<property name="proxyInterfaces">
+			<value>de.broscode.wsv.services.IArztService</value>
+		</property>
+	</bean>
+
+</beans>

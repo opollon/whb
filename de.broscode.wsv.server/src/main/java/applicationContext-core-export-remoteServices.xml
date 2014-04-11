@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!-- ========================= Start of BEAN POSTPROCESSORS ======================== -->
+
+	<bean name="/userService"
+		class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service" ref="userService" />
+		<property name="serviceInterface" value="de.broscode.wsv.services.IUserService" />
+	</bean>
+
+	<bean name="/kundenService"
+		class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service" ref="kundenService" />
+		<property name="serviceInterface" value="de.broscode.wsv.services.IKundenService" />
+	</bean>
+	
+	<bean name="/migrationService"
+		class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service" ref="migrationService" />
+		<property name="serviceInterface" value="de.broscode.wsv.services.IMigrationService" />
+	</bean>
+
+	<bean name="/arztService"
+		class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service" ref="arztService" />
+		<property name="serviceInterface" value="de.broscode.wsv.services.IArztService" />
+	</bean>
+</beans>
