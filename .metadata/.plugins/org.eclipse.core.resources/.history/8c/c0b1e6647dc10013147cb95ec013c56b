@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="de.broscode.wsv.server">
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <dependent-module archiveName="de.broscode.wsv.interfaces-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/de.broscode.wsv.interfaces/de.broscode.wsv.interfaces">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="de.broscode.wsv.domain-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/de.broscode.wsv.domain/de.broscode.wsv.domain">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="de.broscode.wsv.database-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/de.broscode.wsv.database/de.broscode.wsv.database">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/de.broscode.wsv.server/build/classes"/>
+        <property name="context-root" value="de.broscode.wsv.server"/>
+    </wb-module>
+</project-modules>
