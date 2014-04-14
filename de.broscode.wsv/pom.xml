@@ -4,10 +4,10 @@
   <artifactId>de.broscode.wsv.parent</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <modules>
-  	<module>U:/git/whb/de.broscode.wsv.domain</module>
-  	<module>U:/git/whb/de.broscode.sescon.database</module>
-  	<module>U:/git/whb/de.broscode.wsv.interfaces</module>
-  	<module>U:/git/whb/de.broscode.wsv.server</module>
+  <modules>  	
+  	<module>../de.broscode.wsv.domain</module>
+  	<module>../de.broscode.sescon.database</module>
+  	<module>../de.broscode.wsv.interfaces</module>
+  	<module>../de.broscode.wsv.server</module>
   </modules>
 </project>
